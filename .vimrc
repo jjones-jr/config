@@ -22,6 +22,7 @@ Plugin 'honza/vim-snippets'
 ""Plugin 'Valloric/YouCompleteMe'
 Plugin 'jmcantrell/vim-virtualenv'
 Plugin 'scrooloose/nerdtree'
+Plugin 'terryma/vim-multiple-cursors'
 
 
 
