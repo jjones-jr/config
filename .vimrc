@@ -1,4 +1,4 @@
-"as of 9/16/2015
+"as of 10/13/2015
 
 set nocompatible
 filetype off
@@ -15,7 +15,7 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'fatih/vim-go'
 "Plugin 'ervandew/supertab'
 "Plugin 'tagbar'
-Plugin 'YouCompleteMe'
+Plugin 'valloric/YouCompleteMe'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'jmcantrell/vim-virtualenv'
@@ -30,6 +30,7 @@ filetype plugin indent on
 
 set number
 set ruler
+syntax on
 syntax enable
 set encoding=utf-8
 set visualbell
@@ -50,7 +51,7 @@ set hidden
 
 set foldmethod=indent
 set foldnestmax=3
-set nofoldenable
+""""set nofoldenable
 
 set autoindent
 set smartindent
@@ -201,13 +202,13 @@ map <up> gk
 
 
 "ctrlp
-map <C-t> :CtrlP<CR>
-imap <C-t> <ESC>:CtrlP<CR>
+"map <C-t> :CtrlP<CR>
+"imap <C-t> <ESC>:CtrlP<CR>
 map <C-p> :CtrlP<CR>
 imap <C-p> <ESC>:CtrlP<CR>
 
 "nerdtree
-map <C-n> :NERDTreeToggle<CR>>>"
+map <C-l> :NERDTreeToggle<CR>>>"
 
 
 :inoremap ( ()<ESC>i
@@ -233,3 +234,59 @@ let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 
 
+"--------------------vocr-section---------------------
+""----------------------------------------------------
+
+function! Vocr_txt()
+  let @a = system('cat /home/thepa/vocr/output.txt')
+endfunction
+
+inoremap <F8><ESC>:call Vocr_txt()<CR>"ap
+
+""----------------------------------------------------
+""----------------------------------------------------
+
+function! Vocr_bin()
+  let @b = system('cat /home/thepa/vocr/output.bin')
+endfunction
+
+inoremap <F7> <ESC>:call Vocr_bin()<CR>"bp
+
+""----------------------------------------------------
+""----------------------------------------------------
+
+function! Vocr_test()
+  let  curline = getline('.')
+  call inputsave()
+  let codeType = input('Code Type? : ')
+  call inputrestore()
+  call setline('.', curline . ' ' . name)
+  let @c = system('cat /home/thepa/vocr/output.txt')
+endfunction
+
+inoremap <F6> <ESC>:call Vocr_test()<CR>"cp
+
+function! Pyscreen()
+python << PYEND
+import Pyscreenshot as psc
+psc.grab_to_file('/home/thepa/vocr/pyscreentest.png')
+import vim
+return
+vim.command('Vocr_pyscreen()' )
+PYEND
+endfunction
+
+
+
+function! Vocr_pyscreen()
+  let @b = system('cat /home/thepa/vocr/pyscreentest.png')
+endfunction
+
+inoremap <F5> <ESC>:call Vocr_bin()<CR>"bp
+
+
+
+"-----------------vocr node.js section...............
+
+nnoremap <F10> <ESC>:w /home/thepa/vocr/%.js
+"nnoremap <F2> <ESC>:!/home/thepa/bin/vocr<CR>
