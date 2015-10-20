@@ -1,0 +1,101 @@
+ls
+df
+du
+df
+ls
+whereis asterisk
+cd bin
+ls
+uname -a
+ls --color
+ls
+cd
+vim .bashr
+vi
+apt-get update && apt-get install vim && vim /etc/apt/sources.list
+git
+tmux
+apt-get update && apt-get install tmux less git && mkdir github && cd github && git clone http://github.com/jjones-jr/config && cp config/.vimrc ../ && cd && mkdir .vim && mkdir .vim/bundle && cd .vim/bundle && git clone http://github.com/VundleVim/Vundlevim && apt-get -y install build-essential cmake && vim
+git clone http://github.com/VundleVim/Vundle.vim && apt-get -y install build-essential cmake && vim
+;s
+l
+ls
+rm -R YouCompleteMe/
+rm -R ultisnips/
+d
+df
+cd
+sed -i s/YouCompleteMe/ /g .vimrc 
+ls
+vim .vimrc 
+ls --color
+vim .bashrc
+vim .vimrc 
+vim .vimrc 
+vim .vimrc 
+ls
+vim .vimrc 
+vim .vimrc 
+vim .vimrc 
+cd .vim
+ls
+cd bundle/
+ls
+cd vim-colors-solarized/
+ls
+less README.mkd 
+cd
+vim .vimrc 
+ls
+rm nothin
+ls
+cd
+ls
+ls -al
+vim .vimrc
+vim .vimrc
+ls
+vim 
+vim .vimrc
+vim
+vim .vimrc
+vim .vimrc
+vim .vimrc
+pwd
+ls -al
+cd .vim
+ls
+cd bundle/
+ls
+vim 
+ls
+cd tagbar/
+ls
+less -r README
+apt-cache search ctag
+apt-get install exuberant-ctags
+ls
+vim
+noed
+apt-get install nodejs
+npm
+apt-get install npm
+nodejs --version
+npm cache clean -f
+sudo npm install -g n
+npm install -g n
+n stable
+curl
+apt-get -y install wget curl
+n stable
+node --versin
+node --version
+cd
+vim .bashrc
+ls
+ls -al
+exec bash
+exec /bin/bash
+ls
+export SHELL=/bin/bash 
+exec /bin/bash
