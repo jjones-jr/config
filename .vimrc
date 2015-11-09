@@ -112,6 +112,7 @@ silent !mkdir ~/.vim/backups > /dev/null 2>&1
 set undodir=~/.vim/backups
 set undofile
 
+set t_Co=256
 let g:solarized_termcolors=256
 let g:solarized_termtrans=1
 let g:solarized_visibility="high"
